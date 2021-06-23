@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: ${PG_URL:jdbc:postgresql://localhost:5432/camunda_example}
+    username: ${PG_USER:postgres}
+    password: ${PG_PASSWORD:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+camunda:
+  bpm:
+    admin-user:
+      password: demo
+      id: demo
+      first-name: Demo
+      last-name: Demo
+      email: aleksandra.moiseenko@stm-labs.ru
