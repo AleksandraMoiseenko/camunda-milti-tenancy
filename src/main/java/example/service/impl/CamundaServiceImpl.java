@@ -9,12 +9,11 @@ import org.springframework.stereotype.Service;
 import example.service.CamundaService;
 @Service
 public class CamundaServiceImpl implements CamundaService {
-    ProcessEngine processEngine;
 
     RuntimeService runtimeService;
 
-    public CamundaServiceImpl(@Autowired RuntimeService runtimeService) {
-        this.runtimeService = runtimeService;
+    public CamundaServiceImpl(@Autowired ProcessEngine processEngine) {
+        this.runtimeService = processEngine.getRuntimeService();
     }
 
     @Override
