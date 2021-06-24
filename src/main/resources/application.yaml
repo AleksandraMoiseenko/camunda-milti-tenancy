@@ -2,7 +2,7 @@ spring:
   datasource:
     url: ${PG_URL:jdbc:postgresql://localhost:5432/camunda_example}
     username: ${PG_USER:postgres}
-    password: ${PG_PASSWORD:root}
+    password: ${PG_PASSWORD:postgres}
   jpa:
     hibernate:
       ddl-auto: update

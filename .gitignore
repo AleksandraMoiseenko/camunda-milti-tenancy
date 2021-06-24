@@ -1,0 +1,9 @@
+.idea/
+*.iws
+*.iml
+bundles/
+target/
+.settings
+.classpath
+.project
+bin/
