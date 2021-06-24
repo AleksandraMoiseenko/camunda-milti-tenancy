@@ -18,10 +18,12 @@ public class CamundaServiceImpl implements CamundaService {
 
     @Override
     public String start(String processKey) {
+        String tenantId = new ProcessMap()
+                .getProcessNameToTenant().get(processKey);
         ProcessInstance instance = runtimeService
                 .createProcessInstanceByKey(processKey)
-                .processDefinitionTenantId(new ProcessMap()
-                        .getProcessNameToTenant().get(processKey))
+                .processDefinitionTenantId(tenantId)
+                .caseInstanceId(tenantId)
                 .execute();
         return instance.getProcessInstanceId();
     }
