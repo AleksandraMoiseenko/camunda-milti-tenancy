@@ -7,23 +7,37 @@
     <bpmn:sequenceFlow id="Flow_19apfdg" sourceRef="StartEvent_1" targetRef="Activity_15yowqb" />
     <bpmn:serviceTask id="Activity_15yowqb" name="Get Credit Limit" camunda:class="example.delegate.LimitDelegate">
       <bpmn:incoming>Flow_19apfdg</bpmn:incoming>
-      <bpmn:outgoing>Flow_1p0u8pa</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1gvtr67</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:sequenceFlow id="Flow_1p0u8pa" sourceRef="Activity_15yowqb" targetRef="Event_1jhb0mu" />
+    <bpmn:sequenceFlow id="Flow_1p0u8pa" sourceRef="LimitUserTask" targetRef="Event_1jhb0mu" />
     <bpmn:endEvent id="Event_1jhb0mu">
       <bpmn:incoming>Flow_1p0u8pa</bpmn:incoming>
       <bpmn:terminateEventDefinition id="TerminateEventDefinition_09lb8jq" />
     </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1gvtr67" sourceRef="Activity_15yowqb" targetRef="LimitUserTask" />
+    <bpmn:userTask id="LimitUserTask" camunda:formKey="FormLimitUserTask">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Field1LimitUserTaskl" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1gvtr67</bpmn:incoming>
+      <bpmn:outgoing>Flow_1p0u8pa</bpmn:outgoing>
+    </bpmn:userTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Limit">
+      <bpmndi:BPMNEdge id="Flow_1p0u8pa_di" bpmnElement="Flow_1p0u8pa">
+        <di:waypoint x="620" y="117" />
+        <di:waypoint x="752" y="117" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_19apfdg_di" bpmnElement="Flow_19apfdg">
         <di:waypoint x="215" y="117" />
         <di:waypoint x="280" y="117" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1p0u8pa_di" bpmnElement="Flow_1p0u8pa">
+      <bpmndi:BPMNEdge id="Flow_1gvtr67_di" bpmnElement="Flow_1gvtr67">
         <di:waypoint x="380" y="117" />
-        <di:waypoint x="432" y="117" />
+        <di:waypoint x="520" y="117" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="179" y="99" width="36" height="36" />
@@ -32,7 +46,10 @@
         <dc:Bounds x="280" y="77" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0uwxxaz_di" bpmnElement="Event_1jhb0mu">
-        <dc:Bounds x="432" y="99" width="36" height="36" />
+        <dc:Bounds x="752" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0gxghnv_di" bpmnElement="LimitUserTask">
+        <dc:Bounds x="520" y="77" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

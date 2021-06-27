@@ -1,7 +1,8 @@
-C:\projects\camunda-multi-tenancy\src\main\java\data\ProcessMap.java
-C:\projects\camunda-multi-tenancy\src\main\java\controller\Controller.java
-C:\projects\camunda-multi-tenancy\src\main\java\delegate\LimitDelegate.java
-C:\projects\camunda-multi-tenancy\src\main\java\service\impl\CamundaServiceImpl.java
-C:\projects\camunda-multi-tenancy\src\main\java\Application.java
-C:\projects\camunda-multi-tenancy\src\main\java\delegate\BalanceDelegate.java
-C:\projects\camunda-multi-tenancy\src\main\java\service\CamundaService.java
+C:\projects\camunda-multi-tenancy\src\main\java\example\delegate\BalanceDelegate.java
+C:\projects\camunda-multi-tenancy\src\main\java\example\Application.java
+C:\projects\camunda-multi-tenancy\src\main\java\example\delegate\LimitDelegate.java
+C:\projects\camunda-multi-tenancy\src\main\java\example\controller\Controller.java
+C:\projects\camunda-multi-tenancy\src\main\java\example\service\CamundaService.java
+C:\projects\camunda-multi-tenancy\src\main\java\example\service\impl\CamundaServiceImpl.java
+C:\projects\camunda-multi-tenancy\src\main\java\example\config\AppConfig.java
+C:\projects\camunda-multi-tenancy\src\main\java\example\data\ProcessMap.java
